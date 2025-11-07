@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-echo-background text-echo-glow antialiased;
+  background-image: radial-gradient(circle at 20% 20%, rgba(166, 208, 255, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(255, 226, 159, 0.14), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(73, 112, 180, 0.12), transparent 60%);
+}
+
+* {
+  scrollbar-color: rgba(166, 208, 255, 0.35) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-echo-accent/60 rounded-full;
+}
+
